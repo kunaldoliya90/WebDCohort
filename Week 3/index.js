@@ -23,7 +23,7 @@
 // i/o Heavy Operation
 // Reading a file || Clock || HTTP Requests
 
-// Reading from aingle files
+// Reading from Single file
 // const fs = require("fs");
 // const contents = fs.readFileSync("./a.txt", "utf-8");
 // console.log(contents);
