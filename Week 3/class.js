@@ -15,9 +15,7 @@ class Rectangle {
     console.log(`the paint color is:" ${this.color}`);
   }
 
-  destroy() {
-
-  }
+  destroy() {}
 }
 
 const rect = new Rectangle(80, 40, "Yellow");
