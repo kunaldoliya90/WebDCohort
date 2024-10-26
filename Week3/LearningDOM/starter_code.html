@@ -1,0 +1,77 @@
+<body>
+    <input type="text"></input>
+    <button onclick="addTodo()">Add todo!</button>
+    <script>
+      let todos = [];
+      function addTodo() {
+        todos.push({
+          title: document.querySelector("input").value
+        })
+        render(todos);
+      }
+  
+      function deleteTodo() {
+        
+        render();
+      }
+   
+      function render(todos) {
+        for (let index = 0; index < todos.length; index++) {
+            const element = todos[index];
+            let newEl = document.createElement("div");
+            let spanEl = document.createElement("h1");
+            spanEl.innerHTML = element.title;
+            newEl.appendChild(spanEl);
+            let mainEl = document.querySelector("body");
+            mainEl.appendChild(newEl);
+        }
+      }
+    </script>
+  </body>
+
+
+
+  <!-- <body>
+    <input type="text" id="todoInput" placeholder="Enter a todo"></input>
+    <button onclick="addTodo()">Add todo!</button>
+    <div id="todoList"></div>
+    <script>
+        let todos = [];
+
+        function addTodo() {
+            const input = document.getElementById("todoInput");
+            if (input.value.trim() === "") return; // Prevent adding empty todos
+            
+            todos.push({
+                title: input.value
+            });
+            input.value = ""; // Clear input after adding
+            render();
+        }
+
+        function deleteTodo(index) {
+            todos.splice(index, 1); // Remove the todo at the given index
+            render();
+        }
+
+        function render() {
+            const todoList = document.getElementById("todoList");
+            todoList.innerHTML = ""; // Clear the list before rendering
+
+            for (let index = 0; index < todos.length; index++) {
+                const element = todos[index];
+                let newEl = document.createElement("div");
+                let spanEl = document.createElement("h1");
+                spanEl.innerText = element.title; // Display the title
+
+                let deleteButton = document.createElement("button");
+                deleteButton.innerText = "Delete";
+                deleteButton.onclick = () => deleteTodo(index); // Set delete function
+
+                newEl.appendChild(spanEl);
+                newEl.appendChild(deleteButton);
+                todoList.appendChild(newEl); // Append to the todoList
+            }
+        }
+    </script>
+</body> -->

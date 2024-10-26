@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="mainDiv">
+    <div id="signupDiv">
+      <!-- <h1>Todo Application</h1> -->
+      <input type="text" placeholder="Enter Email!" id="signupEmailInput" />
+      <input type="text" placeholder="Enter password!" id="signupPasswordInput" />
+      <button onclick="signupHandler()">SignUp</button>
+    </div>
+    <div id="signinDiv"></div>
+      <!-- <h1>Todo Application</h1> -->
+      <input type="text" placeholder="Enter Email!" id="signinEmailInput" />
+      <input type="text" placeholder="Enter Password!" id="signinPasswordInput" />
+      <button onclick="signinHandler()">SignIn</button>
+    </div>
+  </div>
+  </body>
+  <script src="todo.js"></script>
+  <script>
+    async function signupHandler() {
+  let signupEmailValue = document.getElementById("signupEmailInput").value;
+  let signupPasswordValue = document.getElementById(
+    "signupPasswordInput"
+  ).value;
+
+  await axios.post("http://localhost:3000/signup", {
+    username: signupEmailValue,
+    password: signupPasswordValue
+  });
+  alert("You are signed up");
+}
+
+
+
+async function signinHandler() {
+  let signinEmailValue = document.getElementById("signinEmailInput").value;
+  let signinPasswordValue = document.getElementById(
+    "signinPasswordInput"
+  ).value;
+
+  await axios.post("http://localhost:3000/signin", {
+    username: signinEmailValue,
+    password: signinPasswordValue
+  });
+  // alert("You are signed in");
+}
+  </script>
+</html>

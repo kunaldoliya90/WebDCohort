@@ -1,0 +1,12 @@
+.todo-item {
+  display: flex; /* Use flexbox for inline layout */
+  align-items: center; /* Center align items vertically */
+  margin: 10px 0; /* Space between todo items */
+}
+.todo-item h2 {
+  margin: 0; /* Remove default margin */
+  flex-grow: 1; /* Allow text to take up available space */
+}
+.todo-item button {
+  margin-left: 10px; /* Space between buttons and text */
+}
