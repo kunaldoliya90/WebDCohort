@@ -1,7 +1,7 @@
 import './App.css'
 
 function App() {
-  return (<div style={{ justifyItems: 'center', display: 'flex', flexDirection: 'column', gap: 20, alignItems: 'center', backgroundColor: 'lightyellow'}} >
+  return (<div style={{ justifyItems: 'center', display: 'flex', flexDirection: 'column', gap: 20, alignItems: 'center', backgroundColor: 'lightyellow' }} >
     <ProfileCard
       profilePhotoUrl={"https://media.licdn.com/dms/image/v2/D4D03AQFPRTa62lvPVw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730780289099?e=2147483647&v=beta&t=bhj8xdUKlDmjwRmnjQl_srgUp0G5QNlHY9FVlv-HJfQ"}
       usersName={"Kunal Doliya"}
@@ -10,8 +10,7 @@ function App() {
       postContent={"Stellar Achievements: Grabbed a super dream offer..."}
       postImageUrl={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTABbXr4i-QODqhy7tofHYmTYh05rYPktzacw&s'}
     />
-
-<ProfileCard
+    <ProfileCard
       profilePhotoUrl={"https://cdn-icons-png.flaticon.com/512/174/174857.png"}
       usersName={"LinkedIn"}
       subTitle={"Promoted"}
