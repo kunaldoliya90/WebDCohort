@@ -1,36 +1,49 @@
 import { useState } from 'react'
+import { RecoilRoot, atom, useRecoilValue, useSetRecoilState } from 'recoil'
+import { counterAtom } from './store/atoms/counter'
 import './App.css'
 
 function App() {
-  const [value, setValue] = useState(0);
+
 
   return (
     <div >
-      <Counter value={value} />
-      <IncreaseButton setValue={setValue} value={value} />
-      <DecreaseButton setValue={setValue} value={value} />
+      <RecoilRoot>
+        <Counter />
+      </RecoilRoot>
     </div>
   )
 }
 
-function Counter({ value }) {
+function Counter() {
+  return <div>
+    <CurrentCount />
+    <IncreaseButton />
+    <DecreaseButton />
+  </div>
+}
+
+function CurrentCount() {
+  const value = useRecoilValue(counterAtom);
   return <span>
     {value}
   </span>
 }
 
-function DecreaseButton({ setValue, value }) {
+function DecreaseButton() {
+  const setValue = useSetRecoilState(counterAtom);
   function decrementHandler() {
-    setValue(value - 1);
+    setValue(c => c - 1);
   }
   return <div>
     <button onClick={decrementHandler}>Decrease</button>
   </div>
 }
 
-function IncreaseButton({ setValue, value }) {
+function IncreaseButton() {
+  const setValue = useSetRecoilState(counterAtom);
   function incrementHandler() {
-    setValue(value + 1);
+    setValue(c => c + 1);
   }
   return <div>
     <button onClick={incrementHandler}>Inrease</button>
