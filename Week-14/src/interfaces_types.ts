@@ -23,6 +23,51 @@
 //     else return false;
 // }
 
-// the above are primitives 
-// but as application becomes complex we need inrerface an types
+// the above are primitives -> we cannot create complex objects eg User
+// let User = {
+//     name: " Kunal",
+//     age: 21,
+//     address: {
+//         city:" Indore",
+//         country: 'India',
+//         pincode: 65464
+//     }
+// }
+// function isLegal(user : ?) : boolean{
 
+// }
+
+
+// so how to solve this problem ? using interfaces
+
+interface User {
+    name: string,
+    age: number,
+    address: {
+        city: string,
+        country: string,
+        pincode: number
+    };
+}
+
+let user: User = {
+    name: " Kunal",
+    age: 21,
+    address: {
+        city: " Indore",
+        country: 'India',
+        pincode: 65464
+    }
+}
+function isLegal(user: User): boolean {
+    return user.age >= 18;
+}
+
+let x : boolean = isLegal(user);
+if(x == true){
+    console.log("User is Legal");
+}else{
+    console.log("I am not legal");
+}
+
+// but as application becomes complex we need inrerface an types
