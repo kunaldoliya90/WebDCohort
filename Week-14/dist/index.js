@@ -1,4 +1,5 @@
 "use strict";
+// Typescript is all about providing types that what type should it follows over javascript
 // let x: number = 1; // c++ -> int x = 1;
 // // x = "Kunal" - cannot do in TS 
 // console.log(x);
@@ -12,8 +13,15 @@
 //     console.log("Hello, " + firstName);
 // }
 // -> sum function
-function sum(num1, num2) {
+function sum(num1, num2) { 
     return (num1 + num2);
 }
-let ans = sum(4, 5);
-console.log(ans);
+// let ans : any = sum(4, 5);
+// ans = "Kunal"
+// console.log(ans);
+// let ans = sum(4, 5);
+// // ans = "Kunal" -> cannot do this
+// console.log(ans);
+// let ans : number = sum(4, 5);
+// // ans = "Kunal" -> cannot do this
+// console.log(ans);
