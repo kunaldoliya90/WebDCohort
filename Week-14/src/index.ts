@@ -79,17 +79,17 @@
 
 // Types in ts:
 
-interface userType {
-    name: string,
-    age: number
-}
-function greet(user: userType) {
-    console.log("hello, " + user.name);
-}
+// interface userType {
+//     name: string,
+//     age: number
+// }
+// function greet(user: userType) {
+//     console.log("hello, " + user.name);
+// }
 
-let user: userType = {
-    name: "Kunal",
-    age: 21
-}
+// let user: userType = {
+//     name: "Kunal",
+//     age: 21
+// }
 
-greet(user);
+// greet(user);
