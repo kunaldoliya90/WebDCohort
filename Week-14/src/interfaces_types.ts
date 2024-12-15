@@ -193,26 +193,53 @@
 
 // Intersection
 
-type Employee = {
-    name: string;
-    startDate: string;
+// type Employee = {
+//     name: string;
+//     startDate: string;
 
-}
-type Manager = {
-    name: string;
-    department: string;
-}
-type TeamLead = Employee & Manager; // I can also use "|"  or operator
-let e: Employee = {
-    name: "Kunal",
-    startDate: "01-02-2004",
-}
-let m: Manager = {
-    name: "Kunal",
-    department: "CS",
-}
-let t: TeamLead = {
-    name: "Kunal",
-    startDate: "01-02-2004",
-    department: "CS"
-}
+// }
+// type Manager = {
+//     name: string;
+//     department: string;
+// }
+// type TeamLead = Employee & Manager; // I can also use "|"  or operator
+// let e: Employee = {
+//     name: "Kunal",
+//     startDate: "01-02-2004",
+// }
+// let m: Manager = {
+//     name: "Kunal",
+//     department: "CS",
+// }
+// let t: TeamLead = {
+//     name: "Kunal",
+//     startDate: "01-02-2004",
+//     department: "CS"
+// }
+
+// // create 2 types called user and admin
+// // create a function that takes either a user or admin as an input and return sayin "welcoeme" = name
+
+// interface Admin {
+//     name : string;
+//     permissions: string;
+// }
+
+// interface User {
+//     name: string;
+//     age : number;
+// }
+
+// function greet (user : User | Admin){
+//     console.log(user.name) // but I cannot use user.age or permissions because they are not common in both the interfaces
+// }
+
+// interface User {
+//     age: number | string;
+// }
+
+
+// ------------------------------------------------------------------------------------------------
+
+
+// Arrays in TS
